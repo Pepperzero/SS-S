@@ -12,6 +12,11 @@ $(".home-slider_component").each(function (index) {
       delay: 4000,
       disableOnInteraction: false,
     },
+    navigation: {
+      nextEl: $(this).find(".swiper-next")[0],
+      prevEl: $(this).find(".swiper-prev")[0],
+      disabledClass: "is-disabled",
+    },
   });
 });
 
