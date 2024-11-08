@@ -8,15 +8,19 @@ $(".home-slider_component").each(function (index) {
     speed: 400,
     centerInsufficientSlides: true,
     loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: true,
+    // },
     navigation: {
       nextEl: $(this).find(".swiper-next")[0],
       prevEl: $(this).find(".swiper-prev")[0],
       disabledClass: "is-disabled",
     },
+    allowTouchMove: true, // Enables touch interactions
+    touchRatio: 1, // Controls sensitivity of swiping; 1 is default
+    touchAngle: 45, // Angle to detect swipe direction
+    threshold: 5, // Minimum distance to start a swipe (default is 0)
   });
 });
 
